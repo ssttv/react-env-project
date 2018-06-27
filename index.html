@@ -14,23 +14,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
   <script>
-    const MyTitle = function () {
-      return React.createElement('div', null,
-        React.createElement('h1', null, 'This is my second component')
+
+    const ce = React.createElement
+
+    const MyTitle = function (props) {
+      return ce('div', null,
+        ce('h1', { style: { color: props.color } }, props.title)
       )
     }
 
     const MyFirstComponent = function () {
-      return React.createElement('div', { id: 'my-first-component' }, [
-        React.createElement(MyTitle),
-        React.createElement(MyTitle),
-        React.createElement(MyTitle),
-        React.createElement(MyTitle)]
+      return ce('div', { id: 'my-first-component' }, [
+        ce(MyTitle, { title: 'Battleship Potemkin', color: 'GreenYellow' }),
+        ce(MyTitle, { title: 'Dancer in the Dark', color: 'YellowGreen' }),
+        ce(MyTitle, { title: 'Eraserhead', color: 'LimeGreen' }),
+        ce(MyTitle, { title: 'Leviathan', color: 'peru' })]
       )
     }
 
     ReactDOM.render(
-      React.createElement(MyFirstComponent),
+      ce(MyFirstComponent),
       document.getElementById('app')
     )
   </script>
