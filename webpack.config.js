@@ -18,9 +18,11 @@ module.exports = {
     chunks: true
   },
   module:{
-    rules: {
-      test: /\.jsx?$/,
-      loader: "babel-loader"
-    }
+    rules: [
+      {
+        test: /\.jsx?$/,
+        loader: "babel-loader"
+      }
+    ]
   }
 };
