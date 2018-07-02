@@ -1,6 +1,5 @@
 import React from "react";
-const React = require("react");
-import render from "react-dom";
+import { render } from "react-dom";
 
 const ce = React.createElement;
 
