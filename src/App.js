@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import logo from "./logo.svg";
-import "./App.css";
+import "./index.css";
 
 const substract = (a, b) => a - b;
 
