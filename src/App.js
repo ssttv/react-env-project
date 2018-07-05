@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import logo from "./logo.svg";
 import "./App.css";
 
-const add = (a, b) => a + b;
+const substract = (a, b) => a - b;
 
 const App = () => (
   <div classname="app">
