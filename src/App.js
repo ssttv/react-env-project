@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import logo from "./logo.svg";
 import "./App.css";
 
-const multiply = (a, b) => a * b;
+const multiply = (a, b) => a * b * a;
 
 const App = () => (
   <div classname="app">
