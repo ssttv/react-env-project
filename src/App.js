@@ -10,7 +10,7 @@ const App = () => (
     <div classname="landing">
       <h1>Video App</h1>
       <input type="text" placeholder="Search the App" />
-      <a>or Browse All</a>
+      <a>otherwise, you might Browse All</a>
     </div>
   </div>
 );
