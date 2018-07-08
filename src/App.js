@@ -8,10 +8,11 @@ const multiply = (a, b) => a * b;
 const FourOhFour = () => <h1>404</h1>;
 const App = () => (
   <div classname="app">
-    <div classname="landing">
-      <h1>Video App</h1>
-      <input type="text" placeholder="Search the App" />
-      <a>otherwise, you might Browse All</a>
+    <Switch>
+    <Route exact path="/" component={Landing} />
+    <Route path = "/search" component={Search} />
+    <Route component = {FourOhFour} />
+    </Switch>
     </div>
   </div>
 );
